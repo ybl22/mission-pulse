@@ -1,6 +1,6 @@
 # 🚀 MissionPulse
 
-> A real-time telemetry monitoring system that simulates spacecraft data, detects anomalies, and displays system health through an interactive mission control dashboard.
+> A real-time telemetry monitoring system that simulates spacecraft data, detects anomalies, and displays system health through an interactive mission control dashboard — built to one day be a public web experience for space enthusiasts.
 
 ![Python](https://img.shields.io/badge/Python-3.10+-blue?style=flat-square&logo=python)
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.100+-green?style=flat-square&logo=fastapi)
@@ -14,7 +14,7 @@
 
 MissionPulse simulates spacecraft telemetry streams — including temperature, battery voltage, and signal strength — and analyzes incoming data in real time to detect unusual behavior using machine learning.
 
-The goal is to replicate a simplified mission control system where sensor data is monitored continuously, anomalies are flagged automatically, and system health is presented through a live dashboard.
+The long-term vision is a **publicly accessible mission control experience** inspired by real programs like Artemis and OSIRIS-REx, where anyone can visit the site, watch live simulated telemetry, track system health, and feel what it's like to monitor a spacecraft in flight.
 
 ---
 
@@ -25,7 +25,8 @@ The goal is to replicate a simplified mission control system where sensor data i
 - 🚨 **Alert System** — Severity-tiered alerts triggered by detected anomalies
 - 💚 **System Health Score** — Composite health indicator derived from all active sensor conditions
 - 📊 **Live Dashboard** — Interactive charts and real-time system status panels
-- 🛸 **Multi-Spacecraft Support** *(planned)* — Monitor multiple vehicles simultaneously
+- 🌍 **Public Web Experience** *(in progress)* — Designed to be visited and explored by anyone, no setup required
+- 🛸 **Multi-Spacecraft Support** *(planned)* — Monitor multiple missions simultaneously
 
 ---
 
@@ -67,6 +68,14 @@ Simulator → API → Anomaly Detection → Database → Dashboard
 |------|---------|
 | React | UI framework |
 | Recharts / Chart.js | Data visualization |
+
+### Deployment *(planned)*
+| Tool | Purpose |
+|------|---------|
+| Render / Railway | Backend hosting |
+| Vercel | Frontend hosting |
+| PostgreSQL | Production database (replaces SQLite) |
+| Docker | Containerization |
 
 ---
 
@@ -130,11 +139,29 @@ Dashboard will be available at `http://localhost:5173`
 
 ## 🗺️ Roadmap
 
-- [ ] WebSocket support for true real-time streaming
-- [ ] Multiple spacecraft views and fleet overview
+### Phase 1 — Core (Current)
+- [ ] Telemetry simulation engine
+- [ ] Anomaly detection pipeline
+- [ ] REST API with FastAPI
+- [ ] Basic React dashboard
+
+### Phase 2 — Real-Time
+- [ ] WebSocket support for live streaming data
+- [ ] Multiple spacecraft views
 - [ ] More advanced ML models (Isolation Forest, LSTM)
-- [ ] User authentication and mission profiles
-- [ ] Deployment (Docker + cloud hosting)
+
+### Phase 3 — Public Launch
+- [ ] Migrate SQLite → PostgreSQL for production
+- [ ] Dockerize backend and frontend
+- [ ] Deploy to Render (API) + Vercel (frontend)
+- [ ] Custom domain — open to everyone, no sign-up required
+- [ ] Simulated mission events tied to real programs (Artemis, etc.)
+
+---
+
+## 🌍 Vision
+
+MissionPulse is built to be a fun, open space anyone can visit — no account, no sign-up, just drop in and watch the data fly. With programs like Artemis pushing back to the Moon and commercial spaceflight taking off, there's never been a better time to bring that excitement to the browser.
 
 ---
 
@@ -147,3 +174,4 @@ Dashboard will be available at `http://localhost:5173`
 ## 📄 License
 
 This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
+
