@@ -168,7 +168,7 @@ MissionPulse is built to be a fun, open space anyone can visit — no account, n
 ## 👨‍💻 Author
 
 **Johan Rosa**  
-
+>:3
 ---
 
 ## 📄 License
